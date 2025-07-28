@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run watch-css",
+    "dev": "npm run sass:watch",
     "sass": "sass scss/main.scss assets/css/main.css",
     "sass:watch": "sass --watch scss/main.scss assets/css/main.css",
     "build": "sass scss/main.scss assets/css/main.css --style=compressed"
