@@ -1,0 +1,18 @@
+{
+  "name": "primetraining-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run watch-css",
+    "sass": "sass scss/main.scss assets/css/main.css",
+    "sass:watch": "sass --watch scss/main.scss assets/css/main.css",
+    "build": "sass scss/main.scss assets/css/main.css --style=compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
+}

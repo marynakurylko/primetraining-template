@@ -1,0 +1,11 @@
+@use "../base/variables" as *;
+@use "../utils/mixins" as *;
+
+.container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: calc($gutter / 2);
+  padding-right: calc($gutter / 2);
+}
