@@ -21,11 +21,11 @@ h6 {
 }
 
 a {
-  color: var(--color-primary);
+  color: var(--color-text);
   text-decoration: none;
 
   &:hover {
     filter: brightness(90%);
-    text-decoration: underline;
+    color: var(--color-primary);
   }
 }
