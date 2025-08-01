@@ -12,11 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Завантаження хедера і футера
   loadComponent("#site-header", "components/header.html");
   loadComponent("#site-footer", "components/footer.html");
 
-  // Завантаження контенту сторінки
   const loadPage = async () => {
     const hash = window.location.hash || "#home";
     const page = hash.replace("#", "");
@@ -33,9 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Початкове завантаження
   loadPage();
 
-  // Перезавантаження контенту при зміні хешу
   window.addEventListener("hashchange", loadPage);
 });

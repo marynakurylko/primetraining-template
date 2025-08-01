@@ -50,12 +50,12 @@ h6 {
 }
 
 a {
-  color: var(--color-primary);
+  color: var(--color-text);
   text-decoration: none;
 }
 a:hover {
   filter: brightness(90%);
-  text-decoration: underline;
+  color: var(--color-primary);
 }
 
 .container {
@@ -109,7 +109,7 @@ a:hover {
   font-weight: 500;
 }
 .site-header .main-nav ul li a:hover {
-  text-decoration: underline;
+  color: var(--color-primary);
 }
 .site-header .main-nav .btn {
   background-color: var(--color-primary);
@@ -195,7 +195,6 @@ a:hover {
 .site-footer .footer-right p,
 .site-footer .footer-right li,
 .site-footer .footer-right a {
-  color: var(--color-text);
   font-size: 0.9rem;
 }
 .site-footer .footer-left ul,
@@ -209,16 +208,6 @@ a:hover {
 .site-footer .footer-center ul li,
 .site-footer .footer-right ul li {
   margin-bottom: 0.5rem;
-}
-.site-footer .footer-left ul a,
-.site-footer .footer-center ul a,
-.site-footer .footer-right ul a {
-  text-decoration: none;
-}
-.site-footer .footer-left ul a:hover,
-.site-footer .footer-center ul a:hover,
-.site-footer .footer-right ul a:hover {
-  text-decoration: underline;
 }
 .site-footer img {
   width: 40px;
