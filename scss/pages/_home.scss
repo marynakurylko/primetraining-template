@@ -28,8 +28,37 @@
       border-left: none;
     }
 
-    .hero-image img,
     .hero-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-light-gray);
+      padding: 1.5rem 1.5rem 4.5rem 1.5rem;
+
+      p {
+        width: 60%;
+
+        margin-bottom: 1.25rem;
+      }
+
+      a {
+        width: fit-content;
+        font-weight: 600;
+        color: var(--color-text);
+        text-decoration: none;
+        padding: 0.5rem 1.2rem;
+        &:hover {
+          transition: background-color 0.3s ease;
+          background-color: var(--color-text);
+          color: var(--color-white);
+          border-radius: 8px;
+        }
+      }
+    }
+
+    .hero-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -44,19 +73,16 @@
     .hero-committed {
       grid-column: 3 / 4;
       grid-row: 1 / 2;
-      padding: 1rem;
     }
 
     .hero-guided {
       grid-column: 1 / 2;
       grid-row: 2 / 3;
-      padding: 1rem;
     }
 
     .hero-gym {
       grid-column: 2 / 3;
       grid-row: 2 / 3;
-      padding: 1rem;
     }
 
     .hero-image-small {
@@ -135,10 +161,6 @@
       display: grid;
       grid-template-rows: auto auto auto; // заголовок, змінний вміст, посилання
 
-      h3 {
-        font-size: 1.4rem;
-      }
-
       .community-feature {
         display: flex;
         flex-direction: column;
@@ -148,20 +170,12 @@
         &:first-child {
           border-top: none;
         }
-
-        h4 {
-          font-size: 1rem;
-        }
-
-        p {
-          font-size: 0.9rem;
-        }
       }
 
       .community-link a {
         width: fit-content;
         font-weight: 600;
-        color: var(--color-primary);
+        color: var(--color-text);
         text-decoration: none;
         padding: 0.5rem 1.2rem;
         &:hover {
