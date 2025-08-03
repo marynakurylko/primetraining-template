@@ -88,11 +88,16 @@ a:hover {
 
 .container {
   width: 100%;
-  max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .site-header {
@@ -111,7 +116,7 @@ a:hover {
   align-items: center;
   gap: 0.5rem;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-decoration: none;
   color: var(--color-text);
 }
@@ -140,17 +145,18 @@ a:hover {
   color: var(--color-primary);
 }
 .site-header .main-nav .btn {
+  width: fit-content;
+  font-weight: 600;
   background-color: var(--color-primary);
-  color: var(--color-white);
+  color: var(--color-text);
+  text-decoration: none;
   padding: 0.5rem 1.2rem;
   border-radius: 8px;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 0.8rem;
-  transition: background 0.3s ease;
 }
 .site-header .main-nav .btn:hover {
-  filter: brightness(90%);
+  transition: background-color 0.3s ease;
+  background-color: var(--color-text);
+  color: var(--color-white);
 }
 .site-header .burger {
   display: none;
@@ -205,25 +211,7 @@ a:hover {
 .site-footer .footer-left,
 .site-footer .footer-center,
 .site-footer .footer-right {
-  flex: 1 1 200px;
-}
-.site-footer .footer-left h4,
-.site-footer .footer-center h4,
-.site-footer .footer-right h4 {
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: var(--color-text);
-}
-.site-footer .footer-left p,
-.site-footer .footer-left li,
-.site-footer .footer-left a,
-.site-footer .footer-center p,
-.site-footer .footer-center li,
-.site-footer .footer-center a,
-.site-footer .footer-right p,
-.site-footer .footer-right li,
-.site-footer .footer-right a {
-  font-size: 0.9rem;
+  flex: 1;
 }
 .site-footer .footer-left ul,
 .site-footer .footer-center ul,
@@ -235,7 +223,26 @@ a:hover {
 .site-footer .footer-left ul li,
 .site-footer .footer-center ul li,
 .site-footer .footer-right ul li {
-  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+.site-footer .footer-left {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: flex-start;
+}
+.site-footer .footer-center {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+}
+.site-footer .footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: flex-end;
 }
 .site-footer img {
   width: 40px;
