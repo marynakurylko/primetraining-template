@@ -44,17 +44,29 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-weight: 700;
-  line-height: 1.2;
+  font-weight: 800;
   color: var(--color-text);
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 1.5rem;
 }
 
 h1,
 h2 {
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: 900;
   letter-spacing: -3px;
   text-transform: uppercase;
+}
+
+p {
+  margin: 0.25rem 0;
+  font-size: 1.25rem;
 }
 
 a {
@@ -76,11 +88,16 @@ a:hover {
 
 .container {
   width: 100%;
-  max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .site-header {
@@ -99,7 +116,7 @@ a:hover {
   align-items: center;
   gap: 0.5rem;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-decoration: none;
   color: var(--color-text);
 }
@@ -128,17 +145,18 @@ a:hover {
   color: var(--color-primary);
 }
 .site-header .main-nav .btn {
+  width: fit-content;
+  font-weight: 600;
   background-color: var(--color-primary);
-  color: var(--color-white);
+  color: var(--color-text);
+  text-decoration: none;
   padding: 0.5rem 1.2rem;
   border-radius: 8px;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 0.8rem;
-  transition: background 0.3s ease;
 }
 .site-header .main-nav .btn:hover {
-  filter: brightness(90%);
+  transition: background-color 0.3s ease;
+  background-color: var(--color-text);
+  color: var(--color-white);
 }
 .site-header .burger {
   display: none;
@@ -193,25 +211,7 @@ a:hover {
 .site-footer .footer-left,
 .site-footer .footer-center,
 .site-footer .footer-right {
-  flex: 1 1 200px;
-}
-.site-footer .footer-left h4,
-.site-footer .footer-center h4,
-.site-footer .footer-right h4 {
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: var(--color-text);
-}
-.site-footer .footer-left p,
-.site-footer .footer-left li,
-.site-footer .footer-left a,
-.site-footer .footer-center p,
-.site-footer .footer-center li,
-.site-footer .footer-center a,
-.site-footer .footer-right p,
-.site-footer .footer-right li,
-.site-footer .footer-right a {
-  font-size: 0.9rem;
+  flex: 1;
 }
 .site-footer .footer-left ul,
 .site-footer .footer-center ul,
@@ -223,7 +223,26 @@ a:hover {
 .site-footer .footer-left ul li,
 .site-footer .footer-center ul li,
 .site-footer .footer-right ul li {
-  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+.site-footer .footer-left {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: flex-start;
+}
+.site-footer .footer-center {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+}
+.site-footer .footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: flex-end;
 }
 .site-footer img {
   width: 40px;
@@ -279,8 +298,33 @@ a:hover {
 .hero .hero-grid > :last-child {
   border-left: none;
 }
-.hero .hero-grid .hero-image img,
 .hero .hero-grid .hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-light-gray);
+  padding: 1.5rem 1.5rem 4.5rem 1.5rem;
+}
+.hero .hero-grid .hero-text p {
+  width: 60%;
+  margin-bottom: 1.25rem;
+}
+.hero .hero-grid .hero-text a {
+  width: fit-content;
+  font-weight: 600;
+  color: var(--color-text);
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+}
+.hero .hero-grid .hero-text a:hover {
+  transition: background-color 0.3s ease;
+  background-color: var(--color-text);
+  color: var(--color-white);
+  border-radius: 8px;
+}
+.hero .hero-grid .hero-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -293,17 +337,14 @@ a:hover {
 .hero .hero-grid .hero-committed {
   grid-column: 3/4;
   grid-row: 1/2;
-  padding: 1rem;
 }
 .hero .hero-grid .hero-guided {
   grid-column: 1/2;
   grid-row: 2/3;
-  padding: 1rem;
 }
 .hero .hero-grid .hero-gym {
   grid-column: 2/3;
   grid-row: 2/3;
-  padding: 1rem;
 }
 .hero .hero-grid .hero-image-small {
   grid-column: 3/4;
@@ -371,9 +412,6 @@ a:hover {
   display: grid;
   grid-template-rows: auto auto auto;
 }
-.community .community-grid .community-text h3 {
-  font-size: 1.4rem;
-}
 .community .community-grid .community-text .community-feature {
   display: flex;
   flex-direction: column;
@@ -384,16 +422,10 @@ a:hover {
 .community .community-grid .community-text .community-feature:first-child {
   border-top: none;
 }
-.community .community-grid .community-text .community-feature h4 {
-  font-size: 1rem;
-}
-.community .community-grid .community-text .community-feature p {
-  font-size: 0.9rem;
-}
 .community .community-grid .community-text .community-link a {
   width: fit-content;
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--color-text);
   text-decoration: none;
   padding: 0.5rem 1.2rem;
 }
@@ -422,38 +454,32 @@ a:hover {
 
 .cta {
   background-color: var(--color-primary);
-  color: var(--color-white);
-  padding: 4rem 1rem;
+  color: var(--color-text);
+  padding: 6rem 1rem;
   text-align: center;
 }
 .cta .cta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
   max-width: 800px;
   margin: 0 auto;
 }
-.cta .cta-subtitle {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 0.5rem;
+.cta .cta-content p {
+  margin: 0;
 }
-.cta .cta-title {
-  font-size: 2rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-}
-.cta .cta-button {
-  display: inline-block;
-  background-color: var(--color-light-gray);
-  color: var(--color-dark-gray);
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
+.cta .cta-content a {
+  width: fit-content;
   font-weight: 600;
-  font-size: 0.85rem;
-  transition: background-color 0.3s ease;
+  background-color: var(--color-light-gray);
+  color: var(--color-text);
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
 }
-.cta .cta-button:hover {
+.cta .cta-content a:hover {
+  transition: background-color 0.3s ease;
   background-color: var(--color-text);
   color: var(--color-white);
 }

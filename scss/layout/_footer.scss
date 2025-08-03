@@ -16,29 +16,38 @@
   .footer-left,
   .footer-center,
   .footer-right {
-    flex: 1 1 200px;
-
-    h4 {
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: var(--color-text);
-    }
-
-    p,
-    li,
-    a {
-      font-size: 0.9rem;
-    }
-
+    flex: 1;
     ul {
       list-style: none;
       padding: 0;
       margin: 0;
 
       li {
-        margin-bottom: 0.5rem;
+        font-size: 1.25rem;
+        margin-bottom: 0.25rem;
       }
     }
+  }
+
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: flex-start;
+  }
+
+  .footer-center {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+  }
+
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: flex-end;
   }
 
   img {

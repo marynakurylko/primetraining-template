@@ -1,6 +1,12 @@
 @use "../base/variables" as *;
 @use "../utils/mixins" as *;
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 .site-header {
   background-color: var(--color-light-gray);
   padding: 1rem $gutter;
@@ -18,7 +24,7 @@
     align-items: center;
     gap: 0.5rem;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-decoration: none;
     color: var(--color-text);
 
@@ -52,17 +58,17 @@
     }
 
     .btn {
+      width: fit-content;
+      font-weight: 600;
       background-color: var(--color-primary);
-      color: var(--color-white);
+      color: var(--color-text);
+      text-decoration: none;
       padding: 0.5rem 1.2rem;
       border-radius: 8px;
-      text-transform: uppercase;
-      font-weight: 600;
-      font-size: 0.8rem;
-      transition: background 0.3s ease;
-
       &:hover {
-        filter: brightness(90%);
+        transition: background-color 0.3s ease;
+        background-color: var(--color-text);
+        color: var(--color-white);
       }
     }
   }
