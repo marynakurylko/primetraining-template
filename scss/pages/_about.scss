@@ -1,0 +1,153 @@
+.about {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  border: 1px solid var(--color-dark-gray);
+
+  .about-header {
+    grid-column: 1 / -1;
+    font-size: 3rem;
+    font-weight: 900;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--color-dark-gray);
+  }
+
+  .about-intro {
+    background-color: var(--color-primary);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid var(--color-dark-gray);
+    border-bottom: 1px solid var(--color-dark-gray);
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.85rem;
+    }
+  }
+
+  .about-image {
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .about-image-top {
+    border-bottom: 1px solid var(--color-dark-gray);
+  }
+
+  .about-image-bottom {
+    border-right: 1px solid var(--color-dark-gray);
+  }
+
+  .about-vision {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 0.85rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+
+    .about-intro,
+    .about-image-top,
+    .about-image-bottom,
+    .about-vision {
+      border-right: none;
+      border-bottom: 1px solid var(--color-dark-gray);
+    }
+  }
+}
+
+.about-cta {
+  border: 1px solid var(--color-dark-gray);
+  border-top: none;
+
+  .about-cta-image {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .about-cta-text {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      color: white;
+      max-width: 50%;
+
+      h2 {
+        font-size: 1.6rem;
+        font-weight: 800;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  .about-cta-bottom {
+    background-color: var(--color-primary-light);
+    text-align: center;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    .small-title {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 800;
+    }
+
+    .btn-primary {
+      background-color: var(--color-primary);
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 3px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: var(--color-primary);
+      }
+    }
+  }
+}
