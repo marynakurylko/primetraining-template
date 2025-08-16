@@ -2,40 +2,22 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: auto 1fr 1fr;
-  border: 1px solid var(--color-dark-gray);
+  // border: 1px solid var(--color-dark-gray);
 
   .about-header {
     grid-column: 1 / -1;
-    font-size: 3rem;
-    font-weight: 900;
     padding: 1.5rem;
     border-bottom: 1px solid var(--color-dark-gray);
   }
 
   .about-intro {
     background-color: var(--color-primary);
-    padding: 2rem;
+    padding: 1.5rem 1.5rem 4.5rem 1.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     border-right: 1px solid var(--color-dark-gray);
     border-bottom: 1px solid var(--color-dark-gray);
-
-    h2 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-    }
-
-    h4 {
-      font-size: 0.9rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-
-    p {
-      font-size: 0.85rem;
-    }
   }
 
   .about-image {
@@ -56,20 +38,10 @@
   }
 
   .about-vision {
-    padding: 2rem;
+    padding: 1.5rem 1.5rem 4.5rem 1.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
-    h3 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-size: 0.85rem;
-    }
+    justify-content: space-between;
   }
 
   @media (max-width: 768px) {
@@ -81,13 +53,12 @@
     .about-image-bottom,
     .about-vision {
       border-right: none;
-      border-bottom: 1px solid var(--color-dark-gray);
     }
   }
 }
 
 .about-cta {
-  border: 1px solid var(--color-dark-gray);
+  border-top: 1px solid var(--color-dark-gray);
   border-top: none;
 
   .about-cta-image {
@@ -105,48 +76,34 @@
       left: 2rem;
       color: white;
       max-width: 50%;
-
-      h2 {
-        font-size: 1.6rem;
-        font-weight: 800;
-        line-height: 1.2;
-      }
     }
   }
 
   .about-cta-bottom {
     background-color: var(--color-primary-light);
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 6rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
 
-    .small-title {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 1px;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      font-weight: 800;
+    p {
+      margin: 0;
     }
 
     .btn-primary {
-      background-color: var(--color-primary);
-      color: white;
-      font-size: 0.8rem;
+      width: fit-content;
       font-weight: 600;
-      text-transform: uppercase;
-      padding: 0.5rem 1rem;
+      background-color: var(--color-primary);
+      color: var(--color-text);
       text-decoration: none;
-      border-radius: 3px;
-      transition: background-color 0.3s ease;
-
+      padding: 0.5rem 1.2rem;
+      border-radius: 8px;
       &:hover {
-        background-color: var(--color-primary);
+        transition: background-color 0.3s ease;
+        background-color: var(--color-text);
+        color: var(--color-white);
       }
     }
   }
