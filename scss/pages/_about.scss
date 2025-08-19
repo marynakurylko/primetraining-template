@@ -2,17 +2,16 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: auto 1fr 1fr;
-  // border: 1px solid var(--color-dark-gray);
 
-  .about-header {
+  &__header {
     grid-column: 1 / -1;
     padding: 1.5rem;
     border-bottom: 1px solid var(--color-dark-gray);
   }
 
-  .about-intro {
+  &__intro {
     background-color: var(--color-primary);
-    padding: 1.5rem 1.5rem 4.5rem 1.5rem;
+    padding: 1.5rem 1.5rem 4.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -20,25 +19,25 @@
     border-bottom: 1px solid var(--color-dark-gray);
   }
 
-  .about-image {
+  &__image {
     img {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+
+    &--top {
+      border-bottom: 1px solid var(--color-dark-gray);
+    }
+
+    &--bottom {
+      border-right: 1px solid var(--color-dark-gray);
+    }
   }
 
-  .about-image-top {
-    border-bottom: 1px solid var(--color-dark-gray);
-  }
-
-  .about-image-bottom {
-    border-right: 1px solid var(--color-dark-gray);
-  }
-
-  .about-vision {
-    padding: 1.5rem 1.5rem 4.5rem 1.5rem;
+  &__vision {
+    padding: 1.5rem 1.5rem 4.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -48,10 +47,10 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto auto;
 
-    .about-intro,
-    .about-image-top,
-    .about-image-bottom,
-    .about-vision {
+    &__intro,
+    &__image--top,
+    &__image--bottom,
+    &__vision {
       border-right: none;
     }
   }
@@ -59,9 +58,8 @@
 
 .about-cta {
   border-top: 1px solid var(--color-dark-gray);
-  border-top: none;
 
-  .about-cta-image {
+  &__image {
     position: relative;
 
     img {
@@ -70,7 +68,7 @@
       display: block;
     }
 
-    .about-cta-text {
+    &-text {
       position: absolute;
       bottom: 2rem;
       left: 2rem;
@@ -79,7 +77,7 @@
     }
   }
 
-  .about-cta-bottom {
+  &__bottom {
     background-color: var(--color-primary-light);
     text-align: center;
     padding: 6rem 1rem;
@@ -100,6 +98,7 @@
       text-decoration: none;
       padding: 0.5rem 1.2rem;
       border-radius: 8px;
+
       &:hover {
         transition: background-color 0.3s ease;
         background-color: var(--color-text);
