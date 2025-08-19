@@ -296,7 +296,7 @@ header {
 }
 
 .modal-content {
-  background: #fff;
+  background: var(--color-white);
   padding: 30px;
   border-radius: 12px;
   max-width: 500px;
@@ -304,10 +304,10 @@ header {
   position: relative;
 }
 
-.modal-content h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
-  color: var(--primary, #3e97ff);
+.modal-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
 }
 
 .modal-content label {
