@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const res = await fetch(path);
         const html = await res.text();
         el.innerHTML = html;
+        if (selector === "#site-modal") {
+          initModal();
+        }
       } catch (err) {
         el.innerHTML = "<p>ERROR</p>";
       }
@@ -14,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   loadComponent("#site-header", "components/header.html");
   loadComponent("#site-footer", "components/footer.html");
+  loadComponent("#site-modal", "components/modal-reserve.html");
 
   const initFadeIn = () => {
     const fadeBlocks = document.querySelectorAll(".fade-in");
@@ -45,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector("#page-content").innerHTML = html;
 
       initFadeIn();
+      initModal();
     } catch (err) {
       document.querySelector("#page-content").innerHTML =
         "<p>Page Not Found :(</p>";
@@ -55,3 +60,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("hashchange", loadPage);
 });
+
+// ===== MODAL LOGIC =====
+function initModal() {
+  const modal = document.getElementById("reserve-modal");
+  if (!modal) return;
+
+  const closeBtn = modal.querySelector(".close");
+  const openBtns = document.querySelectorAll(".open-reserve");
+
+  openBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      console.log("11111");
+      modal.style.display = "flex";
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  });
+}
